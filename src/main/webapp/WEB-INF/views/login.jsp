@@ -12,9 +12,6 @@
 		<link rel="stylesheet" href="${ctx}/css/font-awesome.css" />
 		<link rel="stylesheet" href="${ctx}/css/ace-fonts.css" />
 		<link rel="stylesheet" href="${ctx}/css/ace.css" />
-		<script type="text/javascript">
-			var postPath = "${ctx}";
-		</script>
 		<script src="${ctx }/plugins/jquery/jquery.min.js"></script>
 		<script src="${ctx }/plugins/bootstrap/bootstrap.min.js"></script>
 		<script src="${ctx }/plugins/bootstrap/bootstrap-validation.js"></script>
