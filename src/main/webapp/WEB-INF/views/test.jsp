@@ -6,6 +6,13 @@
 <title>测试</title>
 <meta charset="utf-8">
 <script src="${ctx}/plugins/jquery/jquery.min.js"></script>
+<script type="text/javascript">
+function test() {	
+	$.post("${ctx}/user/test",function(data) {
+		$("#testButton").text(data);
+	});
+}
+</script>
 </head>
 <body>
 	<form action="">

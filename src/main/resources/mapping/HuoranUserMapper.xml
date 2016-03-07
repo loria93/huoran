@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "mybatis-3-mapper.dtd" >
+<mapper namespace="org.huoran.main.dao.HuoranUserDao" >
+  <resultMap id="BaseResultMap" type="org.huoran.main.entity.HuoranUser" >
+    <id column="UserId" property="userid" jdbcType="VARCHAR" />
+    <result column="UserName" property="username" jdbcType="VARCHAR" />
+    <result column="Password" property="password" jdbcType="VARCHAR" />
+    <result column="Age" property="age" jdbcType="INTEGER" />
+    <result column="Email" property="email" jdbcType="VARCHAR" />
+    <result column="Phone" property="phone" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    UserId, UserName, `Password`, Age, Email, Phone
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from huoran_user
+    where UserId = #{userid,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from huoran_user
+    where UserId = #{userid,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="org.huoran.main.entity.HuoranUser" >
+    insert into huoran_user (UserId, UserName, `Password`, 
+      Age, Email, Phone)
+    values (#{userid,jdbcType=VARCHAR}, #{username,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
+      #{age,jdbcType=INTEGER}, #{email,jdbcType=VARCHAR}, #{phone,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="org.huoran.main.entity.HuoranUser" >
+    insert into huoran_user
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      UserId,
+      UserName,
+      `Password`,
+      Age,
+      Email,
+      Phone,
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      #{userid,jdbcType=VARCHAR},
+      #{username,jdbcType=VARCHAR},
+      #{password,jdbcType=VARCHAR},
+      #{age,jdbcType=INTEGER},
+      #{email,jdbcType=VARCHAR},
+      #{phone,jdbcType=VARCHAR},
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="org.huoran.main.entity.HuoranUser" >
+    update huoran_user
+    <set >
+      <if test="username != null" >
+        UserName = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="password != null" >
+        `Password` = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null" >
+        Age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="email != null" >
+        Email = #{email,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        Phone = #{phone,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where UserId = #{userid,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="org.huoran.main.entity.HuoranUser" >
+    update huoran_user
+    set UserName = #{username,jdbcType=VARCHAR},
+      `Password` = #{password,jdbcType=VARCHAR},
+      Age = #{age,jdbcType=INTEGER},
+      Email = #{email,jdbcType=VARCHAR},
+      Phone = #{phone,jdbcType=VARCHAR}
+    where UserId = #{userid,jdbcType=VARCHAR}
+  </update>
+</mapper>

@@ -1,18 +1,18 @@
 package org.huoran.main.service;  
   
-import org.huoran.main.dao.UserDao;  
-import org.huoran.main.entity.User;
+import org.huoran.main.dao.HuoranUserDao;  
+import org.huoran.main.entity.HuoranUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
  
 @Service
 public class UserService {
 	@Autowired
-	private UserDao userDao;
+	private HuoranUserDao huoranUserDao;
 	
-	public String getUser() {
+	public String getUserByUserId() {
 		System.out.println("service pass");
-		User user = this.userDao.selectByPrimaryKey(1);
-		return user.getUserName();
+		HuoranUser user = this.huoranUserDao.selectByPrimaryKey("1");
+		return user.getUsername();
 	}
 }

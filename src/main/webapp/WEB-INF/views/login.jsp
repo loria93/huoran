@@ -60,7 +60,8 @@
 												<div class="form-group" style="margin-left:auto; margin-right:auto;">
 													<input type="password" id="loginPassword" value="${loginPassword}"
 													class="form-control" placeholder="密码"
-													check-type="required" required-message="" AutoComplete="Off"/>													<i class="ace-icon fa fa-lock" style="display:none;"></i>
+													check-type="required" required-message="" AutoComplete="Off"/>
+													<i class="ace-icon fa fa-lock" style="display:none;"></i>
 												</div>
 
 												<div class="space"></div>

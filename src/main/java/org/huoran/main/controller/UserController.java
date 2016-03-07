@@ -36,8 +36,8 @@ public class UserController {
 	@RequestMapping(value = {"/test"})
 	public String test() {
 		System.out.println("controller pass");
-		String userName = this.userService.getUser();
-		System.out.println("userName:"+userName);
+		String userName = this.userService.getUserByUserId();
+		System.out.println("userName:" + userName);
 		return userName;
 	}
 }
