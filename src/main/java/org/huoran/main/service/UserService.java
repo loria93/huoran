@@ -12,7 +12,7 @@ public class UserService {
 	
 	public String getUserByUserId() {
 		System.out.println("service pass");
-		HuoranUser user = this.huoranUserDao.selectByPrimaryKey("1");
+		HuoranUser user = this.huoranUserDao.selectByPrimaryKey("00005c0e-47a8-4cee-a62f-bdd62150a122");
 		return user.getUsername();
 	}
 }
