@@ -42,8 +42,14 @@ function login() {
         return false;
     }
 	else {
-		$.post(basePath + "/user/test",function(data) {
-		});
+		$.ajax({
+	        type: "post",
+	        async: false,
+	        url: basePath + "/user/test",
+	        dataType: "json",
+	        success: function(resultUtil) {
+	        }
+	    });
 		return true;
 	}
 }
@@ -54,8 +60,14 @@ function forgot() {
         return false;
     }
 	else {
-		$.post(basePath + "/user/test",function(data) {
-		});
+		$.ajax({
+	        type: "post",
+	        async: false,
+	        url: basePath + "/user/test",
+	        dataType: "json",
+	        success: function(resultUtil) {
+	        }
+	    });
 		return true;
 	}
 }
@@ -70,8 +82,14 @@ function regist() {
 			return false;
 		}
 		else {
-			$.post(basePath + "/user/test",function(data) {
-			});
+			$.ajax({
+		        type: "post",
+		        async: false,
+		        url: basePath + "/user/test",
+		        dataType: "json",
+		        success: function(resultUtil) {
+		        }
+		    });
 			return true;
 		}	
 	}

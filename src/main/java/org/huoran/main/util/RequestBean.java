@@ -2,17 +2,8 @@ package org.huoran.main.util;
 
 
 public class RequestBean{
-	/**
-	 * 用户名
-	 */
 	private String userName;
-	/**
-	 * 用户唯一标识
-	 */
 	private String userId;
-	/**
-	 * 用户密码
-	 */
 	private String password;
 	
 	public String getUserName() {
