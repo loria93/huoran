@@ -6,8 +6,6 @@
   location="%workspace.home%/.." model-entity="FileSystemFolder"/>
  <file-system NAME="src" location="%workspace.home%/../../java" model-entity="FileSystemFolder"/>
  <file-system NAME="classes" location="%workspace.home%/classes" model-entity="FileSystemFolder"/>
- <file-system NAME="src-1"
-  location="%workspace.home%/../../../test/java" model-entity="FileSystemFolder"/>
  <file-system NAME="src-2" location="%workspace.home%/../../resources" model-entity="FileSystemFolder"/>
  <web SERVLET_VERSION="2.4" model-entity="JstWeb" model-path="/web.xml">
   <module URI="/WEB-INF/faces-config.xml" model-entity="WebJSFModule"

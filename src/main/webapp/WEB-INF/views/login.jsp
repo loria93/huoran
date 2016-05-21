@@ -16,7 +16,6 @@
 		<script src="${ctx }/plugins/bootstrap/bootstrap.min.js"></script>
 		<script src="${ctx }/plugins/bootstrap/bootstrap-validation.js"></script>
 		<script src="${ctx }/scripts/login/login.js"></script>
-		
 	</head>
 	<body class="login-layout light-login">
 		<div class="main-container">
