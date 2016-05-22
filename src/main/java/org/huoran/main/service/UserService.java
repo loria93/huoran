@@ -1,6 +1,6 @@
 package org.huoran.main.service;  
   
-import org.huoran.main.dao.HuoranUserDao;  
+import org.huoran.main.dao.HuoranUserDao;
 import org.huoran.main.entity.HuoranUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
